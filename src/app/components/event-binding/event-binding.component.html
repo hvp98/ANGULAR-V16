@@ -1,0 +1,61 @@
+<p>event-binding works!</p>
+<div style="padding: 20px; background-color: #f9f9f9; border-radius: 8px;">
+    <h2>Event Binding Example (View => Class) </h2>
+    <p>In this example, we demonstrate how to use Event binding in Angular.</p>
+</div>
+    
+<!-- // Input Event  -->
+   <div style= "display: flex; justify-content: center; align-items: center; gap: 20px;">
+      <mat-form-field appearance="outline" style="width: 300px;">
+          <mat-label>Enter Something</mat-label>
+          <input type= "text" matInput (input)= "onInput($event)" />
+      </mat-form-field>
+      <p> Input Value:{{ inputValue }} </p>
+   </div>
+  
+    <div style="margin-top: 20px; padding: 10px; background-color: #e0f7fa; border-radius: 4px;">
+      <p>Event Binding in Action:</p>
+  </div>
+
+
+  <!-- Click Event -->
+   <div style="margin-top: 20px; padding: 10px; background-color: #010101; border-radius: 4px;">
+      <button mat-raised-button color="primary" (click)="onclick()">Display Name</button>
+      <button mat-raised-button color="primary" (dblclick)="onDoubleClick()">Double click</button>
+      <button mat-raised-button color="accent" (click)="clearName()">Clear Name</button>
+
+  </div>
+
+  <p style="text-align: center;"> Name: {{ name }} </p>
+
+
+<!-- Change Event -->
+    <div style="margin-top: 20px; padding: 10px; background-color:blanchedalmond ; border-radius: 4px;">
+        <mat-form-field appearance="outline" style="width: 300px;">
+            <mat-label>Select...</mat-label>
+            <mat-select (selectionChange)="onChange($event)">
+                <mat-option value="red">Red</mat-option>
+                <mat-option value="green">Green</mat-option>
+                <mat-option value="blue">Blue</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <p> Selected: {{ selectionValue }} </p>
+    </div>
+
+
+<!-- Change Event for Checkbox -->
+    <div style="margin-top: 20px; padding: 10px; background-color: #f0f0f0; border-radius: 4px;">
+        <mat-checkbox (change)="onCheckboxChange($event)">Accept Terms & Conditions!</mat-checkbox>
+        <p> Checkbox is {{ isChecked ? 'checked' : 'unchecked' }} </p>
+    </div>
+
+
+<!-- Change Event for Radio Button -->
+    <div style="margin-top: 20px; padding: 10px; background-color: #f0f0f0; border-radius: 4px;">
+        <mat-radio-group (change)="onRadioChange($event)">
+            <mat-radio-button value="Male"> Male </mat-radio-button>
+            <mat-radio-button value="Female"> Female </mat-radio-button>
+            <mat-radio-button value="Other"> Other </mat-radio-button>
+        </mat-radio-group>
+        <p> Selected Gender: {{ result }} </p>
+    </div>

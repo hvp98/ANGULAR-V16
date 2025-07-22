@@ -1,0 +1,15 @@
+<p> *ngFor V16 works! </p>
+<div style="padding: 20px; background-color: #f9f9f9; border-radius: 8px;">
+    <h2>For Loop Example (ngFor)</h2>
+    <p>In this example, we demonstrate how to use the *ngFor structural directive in Angular to iterate over a list of items.</p>
+</div>
+
+<mat-form-field appearance="outline" style="width: 300px;">
+    <mat-label>Select a City</mat-label>
+    <mat-select [(ngModel)] = "selectedCity">
+        <mat-option *ngFor = "let city of cities" [value]="city"> 
+                {{ city }}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<p>Selected City: {{ selectedCity }}</p>

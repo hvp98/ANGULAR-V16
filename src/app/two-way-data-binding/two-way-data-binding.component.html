@@ -1,0 +1,13 @@
+<p>two-way-data-binding works!</p>
+<div style="padding: 20px; background-color: #f9f9f9; border-radius: 8px;">
+    <h2>Two-Way-Data-Binding Example (View <=> Class) </h2>
+    <p>In this example, we demonstrate how to use Two-Way-Data-Binding in Angular.
+        "[(ngModel)]"
+    </p>
+</div>
+
+<mat-form-field appearance="outline" style="width: 300px;">
+    <mat-label>Enter Something...</mat-label>
+    <input type="text" matInput [(ngModel)]= "message" />
+</mat-form-field>
+<p>Input Value: {{ message }}</p>
